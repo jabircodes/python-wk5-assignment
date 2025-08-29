@@ -1,1 +1,1 @@
-# python-wk-5-assignment
+# python-wk-5-assignment # CLASS CONSTRUCTOR
