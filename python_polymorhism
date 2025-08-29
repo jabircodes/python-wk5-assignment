@@ -1,0 +1,31 @@
+# Base class: Animal
+class Animal:
+    def move(self):
+        print("The animal moves in some way")
+
+# Subclass: Dog
+class Dog(Animal):
+    def move(self):
+        print("Running on four legs")
+
+# Subclass: Bird
+class Bird(Animal):
+    def move(self):
+        print("Flying in the sky")
+
+# Subclass: Fish
+class Fish(Animal):
+    def move(self):
+        print("Swims in the water")
+
+# Create objects for each class
+dog = Dog()
+bird = Bird()
+fish = Fish()
+
+# Create a list of different vehicles
+animals = [dog, bird, fish]
+
+# Loop through each animal and call its move method
+for animal in animals:
+    animal.move()

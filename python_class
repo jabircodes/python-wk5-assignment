@@ -1,0 +1,38 @@
+# This is our base class called Smartphone
+class Smartphone:
+    # Constructor: used to initialize the object with unique values
+    def __init__(self, brand, model, price):
+        self.brand = brand        # Smartphone brand
+        self.model = model        # Smartphone model
+        self.price = price        # Smartphone price
+
+    # Method to introduce the smartphone
+    def introduce(self):
+        print(f"This is a {self.brand} {self.model} priced at KES{self.price}.")
+
+    # Method to simulate making a call
+    def make_call(self):
+        print(f"{self.brand} {self.model} is making a call...")
+
+# Now we create a subclass called GamingPhone that inherits from Smartphone
+class GamingPhone(Smartphone):
+    # Constructor: we add a new attribute 'cooling_system'
+    def __init__(self, brand, model, price, cooling_system):
+        # Call the parent class constructor to set brand, model, and price
+        super().__init__(brand, model, price)
+        self.cooling_system = cooling_system  # New attribute specific to GamingPhone
+
+    # Overriding the make_call method to show polymorphism
+    def make_call(self):
+        print(f"{self.brand} {self.model} uses {self.cooling_system} while making calls in gaming!")
+
+# Creating objects from both classes
+phone1 = Smartphone("Samsung", "Galaxy S25", 999)
+phone2 = GamingPhone("Asus", "ROG Phone 8", 1299, "Advanced Air Cooling")
+
+# Calling their methods
+phone1.introduce()
+phone1.make_call()
+
+phone2.introduce()
+phone2.make_call()
